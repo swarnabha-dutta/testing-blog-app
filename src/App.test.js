@@ -1,6 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
+beforeAll(() => {
+  console.log("beforeAll");
+});
+
 test("Test First React app case 1", () => {
   // test logic here
   render(<App />);
@@ -30,8 +34,8 @@ test("Test Input Fields", () => {
   const inputPlaceHolder = screen.getByPlaceholderText("Enter the Text")
   expect(inputElement).toBeInTheDocument();
   expect(inputPlaceHolder).toBeInTheDocument();
-  expect(inputElement).toHaveAttribute("name","username");
-  expect(inputElement).toHaveAttribute("id","userId");
-  expect(inputElement).toHaveAttribute("type","text");
-  expect(inputElement).toHaveAttribute("value","swarnabha dutta");
+  expect(inputElement).toHaveAttribute("name", "username");
+  expect(inputElement).toHaveAttribute("id", "userId");
+  expect(inputElement).toHaveAttribute("type", "text");
+  expect(inputElement).toHaveAttribute("value", "swarnabha dutta");
 });
