@@ -36,6 +36,19 @@ Object {
             Data: 
           </p>
         </div>
+        <h1>
+          Class Component methods testing
+        </h1>
+        <div>
+          <h2>
+            Users Class Component
+          </h2>
+        </div>
+        <div
+          class="Functional"
+        >
+          <h1 />
+        </div>
       </div>
     </div>
   </body>,
@@ -70,6 +83,19 @@ Object {
         <p>
           Data: 
         </p>
+      </div>
+      <h1>
+        Class Component methods testing
+      </h1>
+      <div>
+        <h2>
+          Users Class Component
+        </h2>
+      </div>
+      <div
+        class="Functional"
+      >
+        <h1 />
       </div>
     </div>
   </div>,
