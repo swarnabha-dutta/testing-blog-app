@@ -3,13 +3,17 @@ import './App';
 const App = () => {
   return (
     <div className='Ap'>
-      <h1>RTL Query : getByLabelText</h1>
-      <label htmlFor='user-name'>username</label>
-      <input type='text' id='user-name' defaultValue={'Bubu'} />
+      <h1>RTL Query : getAllByLabelText</h1>
+      <label htmlFor='user-name1'>Username</label>
+      <input type='text' id='user-name1' defaultValue={'Bubu'} />
 
-      <br />
-      <label htmlFor='skills'>Skills</label>
-      <input type='checkbox' id='skills' defaultChecked={true} />
+
+      <label htmlFor='user-name2'>Username</label>
+      <input type='text' id='user-name2' defaultValue={'Bubu'} />
+
+
+      <label htmlFor='user-name3'>Username</label>
+      <input type='text' id='user-name3' defaultValue={'Bubu'} />
     </div>
   )
 }
