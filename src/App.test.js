@@ -1,8 +1,10 @@
-import renderer from "react-test-renderer";
-import Users from "./Users";
+import { render, screen } from "@testing-library/react"
+import App from "./App"
 
-test("renders Users component", () => {
-  const componentData = renderer.create(<Users />).getInstance();
-
-  expect(componentData.getUserList()).toBe("user list");
+test("get By Role", () => {
+  render(<App />);
+  const inputField = screen.getByRole("textbox");
+  expect(inputField).toBeInTheDocument();
+  expect(inputField).toHaveValue('hello');
+  expect(inputField).toBeDisabled();
 });
