@@ -2,11 +2,14 @@ import React from 'react'
 import './App';
 const App = () => {
   return (
-    <div className='Ap'>
+    <div className='App'>
       <h1>RTL Query :  getByText and getAllByText</h1>
-      <button>Login</button>
-      <p>p tag testing</p>
-      <p>p tag testing</p>
+      <div data-testid="div-test-id">
+        Testing with test id
+      </div>
+      <div data-testid="div-test-id">
+        Testing with test id
+      </div>
     </div>
   )
 }
