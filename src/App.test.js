@@ -4,13 +4,14 @@ import {
 } from "@testing-library/react"
 import App from "./App"
 
-// test('testing with getByDisplay Value', () => {
-//   render(<App />);
+test('testing with Assertion Methods ', () => {
+  render(<App />);
+  const input = screen.getByRole("textbox");
+  expect(input).toBeInTheDocument();
+  expect(input).toHaveValue('bubu');
+  expect(input).not.toHaveAttribute('id');
 
-
-//   const input = screen.getByDisplayValue("bubu");
-//   expect(input).toBeInTheDocument();
-// })
+})
 
 
 // test('testing with getByDisplay Value', () => {
@@ -32,12 +33,12 @@ import App from "./App"
 // })
 
 
-test('getAllByDisplayValue test Case 2', () => {
-  render(<App />);
-  const inputs = screen.getAllByTestId("bubu");
+// test('getAllByDisplayValue test Case 2', () => {
+//   render(<App />);
+//   const inputs = screen.getAllByTestId("bubu");
 
 
-  for (let input of inputs) {
-    expect(input).toBeInTheDocument();
-  }
-})
+//   for (let input of inputs) {
+//     expect(input).toBeInTheDocument();
+//   }
+// })
