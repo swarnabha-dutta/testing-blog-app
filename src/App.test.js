@@ -1,26 +1,43 @@
 import {
-  getByTestId,
-  getAllByTestId,
+  getByDisplayValue,
   render, screen
 } from "@testing-library/react"
 import App from "./App"
 
-// test('testing with test-id:test Case 1', () => {
+// test('testing with getByDisplay Value', () => {
 //   render(<App />);
 
 
-//   const divId = screen.getByTestId("div-test-id");
-//   expect(divId).toBeInTheDocument();
+//   const input = screen.getByDisplayValue("bubu");
+//   expect(input).toBeInTheDocument();
+// })
+
+
+// test('testing with getByDisplay Value', () => {
+//   render(<App />);
+
+
+//   const textArea = screen.getByDisplayValue("bubu dutta");
+//   expect(textArea).toBeInTheDocument();
 // })
 
 
 
-test('getAllByText test Case 2', () => {
+// test('testing with getByDisplay Value', () => {
+//   render(<App />);
+
+
+//   const textArea = screen.getByDisplayValue("male");
+//   expect(textArea).toBeInTheDocument();
+// })
+
+
+test('getAllByDisplayValue test Case 2', () => {
   render(<App />);
-  const divIds = screen.getAllByTestId("div-test-id");
+  const inputs = screen.getAllByTestId("bubu");
 
 
-  for (let divId of divIds) {
-    expect(divId).toBeInTheDocument();
+  for (let input of inputs) {
+    expect(input).toBeInTheDocument();
   }
 })

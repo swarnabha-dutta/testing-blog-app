@@ -3,13 +3,17 @@ import './App';
 const App = () => {
   return (
     <div className='App'>
-      <h1>RTL Query :  getByText and getAllByText</h1>
-      <div data-testid="div-test-id">
-        Testing with test id
-      </div>
-      <div data-testid="div-test-id">
-        Testing with test id
-      </div>
+      <h1>RTL Query :  getByDisplayValue and getAllByDisplayValue</h1>
+      <input type='text' defaultValue={"bubu"} />
+      <br />
+      <br />
+      <br />
+
+      <textarea defaultValue={'bubu dutta'} />
+      <br />
+      <br />
+      <br />
+      <input type='radio' defaultValue={'bubu'} />
     </div>
   )
 }
