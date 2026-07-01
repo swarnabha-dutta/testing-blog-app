@@ -1,26 +1,37 @@
-import { getByPlaceholderText, getAllByPlaceholderText, render, screen } from "@testing-library/react"
+import {
+  // getByText,
+  getAllByText,
+  render, screen
+} from "@testing-library/react"
 import App from "./App"
 
-// test('getByPlaceholderText  test Case 1', () => {
+// test('getByText   test Case 1', () => {
 //   render(<App />);
-//   const input = screen.getByPlaceholderText(/enter username/i);
-//   // for (let input of inputs) {
-//   //   expect(input).toBeInTheDocument();
-//   // }
-//   expect(input).toBeInTheDocument();
-//   expect(input).toHaveValue("bubu");
+
+
+//   const btn = screen.getByText("Login");
+//   expect(btn).toBeInTheDocument();
+//   // expect(input).toHaveValue("bubu");
+// })
+
+
+// test('getByText   test Case 2', () => {
+//   render(<App />);
+
+
+//   const ptag = screen.getByText("p tag testing");
+//   expect(ptag).toBeInTheDocument();
+//   // expect(input).toHaveValue("bubu");
 // })
 
 
 
-test('getAllByPlaceholderText test Case 2', () => {
+test('getAllByText test Case 2', () => {
   render(<App />);
-  const inputs = screen.getAllByPlaceholderText(/enter username/i);
-  for (let input of inputs) {
+  const pTags = screen.getAllByText("p tag testing");
 
-    expect(input).toBeInTheDocument();
-    expect(input).toHaveValue("bubu");
+
+  for (let pTag of pTags) {
+    expect(pTag).toBeInTheDocument();
   }
-
-
 })
