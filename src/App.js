@@ -2,15 +2,19 @@ import React, { useState } from "react";
 
 
 function App() {
-  const [data, setData] = useState("");
+  const [name, setName] = useState("");
   return (
     <div className="App">
-      <h1>UserEvent testing</h1>
-      <button onClick={() => setData("DATA iS HERE")}>Click Me</button>
-      <h1>{data}</h1>
+      <h1>onChange/Keyboard Testing</h1>
+      {name}
+      <br />
+      <input
+        type="text"
+        onChange={(e) => setName(e.target.value)}
+        placeholder='enter name'
+      />
     </div>
   )
 }
-
 
 export default App;

@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import App from "./App";
-import userEvent from "@testing-library/user-event"
 
-test("User Event Testing", async () => {
+
+test("OnChange / keyboard Changing", async () => {
+  userEvent.setup();
   render(<App />);
-
-  const btn = screen.getByText("Click Me");
-  await userEvent.click(btn);
-
-  expect(screen.getByText("DATA iS HERE")).toBeInTheDocument();
-})
+  const element = screen.getByRole("textbox");
+  await userEvent.type(element, 'bubu');
+  expect(screen.getByText('bubu')).toBeInTheDocument();
+});
