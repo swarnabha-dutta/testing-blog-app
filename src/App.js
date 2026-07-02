@@ -1,13 +1,13 @@
 import React from "react";
-import User from "./User";
 
-function App() {
+function App({testFunction}) {
   return (
     <div className="App">
-      <h1>Understanding of Props</h1>
-      <User name='bju' />
+      <h1>Understanding Functional Props</h1>
+      <button onClick={testFunction}>Click Me</button>
     </div>
   )
 }
+
 
 export default App;
