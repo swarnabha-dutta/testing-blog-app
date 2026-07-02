@@ -1,12 +1,16 @@
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render, screen, act } from "@testing-library/react";
 import App from "./App";
+import userEvent from "@testing-library/user-event";
 
 
-test("OnChange / keyboard Changing", async () => {
-  userEvent.setup();
+
+test("act functionality testing", async () => {
   render(<App />);
+  userEvent.setup();
+
   const element = screen.getByRole("textbox");
-  await userEvent.type(element, 'bubu');
-  expect(screen.getByText('bubu')).toBeInTheDocument();
-});
+  await act(async () => {
+    await userEvent.type(element, "bubu7");
+  })
+  expect(screen.getByText("bubu7")).toBeInTheDocument();
+})

@@ -5,7 +5,7 @@ function App() {
   const [name, setName] = useState("");
   return (
     <div className="App">
-      <h1>onChange/Keyboard Testing</h1>
+      <h1>act functionality testing</h1>
       {name}
       <br />
       <input
