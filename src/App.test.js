@@ -1,10 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
+import userEvent from "@testing-library/user-event"
 
-test("findBy Test case", async () => {
+test("User Event Testing", async () => {
   render(<App />);
 
+  const btn = screen.getByText("Click Me");
+  await userEvent.click(btn);
 
-  const text = await screen.findByText("data is found", {}, { timeout: 16000 });
-  expect(text).toBeInTheDocument();
+  expect(screen.getByText("DATA iS HERE")).toBeInTheDocument();
 })
