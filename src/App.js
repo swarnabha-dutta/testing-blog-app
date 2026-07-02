@@ -1,18 +1,11 @@
-import React, { useState } from "react";
-
+import React from "react";
+import User from "./User";
 
 function App() {
-  const [name, setName] = useState("");
   return (
     <div className="App">
-      <h1>act functionality testing</h1>
-      {name}
-      <br />
-      <input
-        type="text"
-        onChange={(e) => setName(e.target.value)}
-        placeholder='enter name'
-      />
+      <h1>Understanding of Props</h1>
+      <User name='bju' />
     </div>
   )
 }

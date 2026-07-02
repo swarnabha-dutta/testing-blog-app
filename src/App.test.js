@@ -1,16 +1,12 @@
-import { render, screen, act } from "@testing-library/react";
-import App from "./App";
-import userEvent from "@testing-library/user-event";
+import { render, screen } from "@testing-library/react";
+import User from "./User";
 
 
 
-test("act functionality testing", async () => {
-  render(<App />);
-  userEvent.setup();
+test("Understanding of props", () => {
+  const name = "bubu";
+  render(<User name={name} />);
 
-  const element = screen.getByRole("textbox");
-  await act(async () => {
-    await userEvent.type(element, "bubu7");
-  })
-  expect(screen.getByText("bubu7")).toBeInTheDocument();
+  const user = screen.getByText(`User Name:${name}`);
+  expect(user).toBeInTheDocument();
 })
