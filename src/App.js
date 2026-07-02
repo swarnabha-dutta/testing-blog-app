@@ -1,19 +1,13 @@
-import React from 'react'
-import './App';
-const App = () => {
-  return (
-    <div className='App'>
-      <h1>RTL Query :  Assertions  methods</h1>
-      <input
-        type='text'
-        defaultValue={"bubu"}
-        name='userName'
-        className='test-style'
-      // id='user-name'
-      />
+import "./App.css";
 
+function App() {
+  return (
+    <div className="App">
+      <h1>Textmatch with Functions</h1>
+      <div>Hello World</div>
+      {/* <div>Hi World</div> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
