@@ -8,6 +8,9 @@ updated my latest work and use javascrit language
 
 In the project directory, you can run:
 
+
+pls fix it first 
+
 ### `npm start`
 
 Runs the app in the development mode.\
